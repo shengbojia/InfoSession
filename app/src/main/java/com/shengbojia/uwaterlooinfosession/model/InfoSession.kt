@@ -20,7 +20,7 @@ data class InfoSession(
     @SerializedName("description")
     val description: String,
     @SerializedName("website")
-    val website: String
-
-) {
-}
+    val website: String,
+    @SerializedName("building")
+    val building: Building
+)
