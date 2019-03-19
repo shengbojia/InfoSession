@@ -13,6 +13,9 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Query
 
+/**
+ * Api communication setup by Retrofit
+ */
 interface InfoSessionApi {
 
     @GET("/resources/infosessions.json")
