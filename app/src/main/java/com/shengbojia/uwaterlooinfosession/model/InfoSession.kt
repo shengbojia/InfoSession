@@ -1,8 +1,14 @@
 package com.shengbojia.uwaterlooinfosession.model
 
+import androidx.room.Entity
+import androidx.room.Index
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
+@Entity(
+    tableName = "info_sessions",
+    indices = [Index("id")]
+)
 data class InfoSession(
     @PrimaryKey
     @SerializedName("id")
@@ -22,5 +28,11 @@ data class InfoSession(
     @SerializedName("website")
     val website: String,
     @SerializedName("building")
-    val building: Building
-)
+    val building: Building,
+    @SerializedName("audience")
+    val audience: MutableList<String>,
+    @SerializedName("link")
+    val link: String
+){
+
+}
